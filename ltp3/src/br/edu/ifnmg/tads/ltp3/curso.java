@@ -8,31 +8,33 @@ package br.edu.ifnmg.tads.ltp3;
  *
  * @author aluno
  */
-public class pessoa {
+public class curso {
     
     private int id;
     private String nome;
-    
-    
+
+    public curso() {
+        id = 0;
+        nome = "";
+    }
 
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
-        if(id > 1)
-            this.id = id;
+        this.id = id;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) throws Exception {
-        if(nome.length()>3 && nome.length()<250 )
-            this.nome = nome;
-        throw new Exception("Não podem haver nomes com menos de 3 letras e mais do que 250 letras");
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     
-   
+  
+    
+    
 }
