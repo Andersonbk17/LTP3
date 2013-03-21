@@ -4,6 +4,8 @@
  */
 package br.edu.ifnmg.tads.ltp3;
 
+import java.util.Objects;
+
 /**
  *
  * @author aluno
@@ -31,6 +33,37 @@ public class email {
 
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + this.id;
+        hash = 59 * hash + Objects.hashCode(this.endereco);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final email other = (email) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        if (!Objects.equals(this.endereco, other.endereco)) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "email{" + "id=" + id + ", endereco=" + endereco + '}';
     }
     
    

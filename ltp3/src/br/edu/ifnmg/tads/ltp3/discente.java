@@ -21,24 +21,32 @@ public class discente extends pessoa {
         curso = new curso();
         periodo = 0;
     }
-    
-    
-   public void addCurso(curso a){
-       this.curso = a;
+
+    public br.edu.ifnmg.tads.ltp3.curso getCurso() {
+        return curso;
+    }
+
+    public void setCurso(br.edu.ifnmg.tads.ltp3.curso curso) {
+        this.curso = curso;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public int getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(int periodo) {
+        this.periodo = periodo;
     }
     
-   public void setMatricula(int a){
-       this.matricula =a;
-   }
-   public void setPeriodo(int a){
-       this.periodo = a;
-   }
+    
    
-   public int getMatricula(){
-       return this.matricula;
-   }
-   public int getPeriodo(){
-       return this.periodo;
-   }
     
 }
