@@ -18,33 +18,57 @@ public class pessoa {
     private Date nascimento;
     private String rg;
     private int cpf;
-    private List<endereco> endereco;
-    private List<telefone> telefone;
-    private List<email> email;
+    private List<endereco> enderecos;
+    private List<telefone> telefones;
+    private List<email> emails;
 
     public pessoa(){
         id = 0;
         nome = "";
         rg = "";
         cpf = 0;
-        endereco = new LinkedList<endereco>();
-        telefone = new LinkedList<telefone>();
-        email = new LinkedList<email>();
+        enderecos = new LinkedList<endereco>();
+        telefones = new LinkedList<telefone>();
+        emails = new LinkedList<email>();
         
     }
     
     
     public void addEndereco(endereco e){
-        this.endereco.add(e);
+        if(!enderecos.contains(e)){
+            this.enderecos.add(e);
+        }
     }
     
     public void addTelefone(telefone t){
-        this.telefone.add(t);
+        if(!telefones.contains(t)){
+            this.telefones.add(t);
+        }
     }
     public void addEmail(email e){
-        this.email.add(e);
+        if(!emails.contains(e)){
+               this.emails.add(e);
+        }
     }
     
+    
+    public void removeEmails(email e){
+        if(emails.contains(e)){
+               emails.remove(e);
+        }
+    }
+    
+    public void removeEnderecos(endereco e){
+        if(enderecos.contains(e)){
+            enderecos.remove(e);
+        }
+    }
+    
+    public void removeTelefones(telefone t){
+        if(telefones.contains(t)){
+            telefones.remove(t);
+        }
+    }
     
         
     public int getId() {
@@ -52,8 +76,9 @@ public class pessoa {
     }
 
     public void setId(int id) {
-        if(id > 1)
+        if(id > 1) {
             this.id = id;
+        }
     }
 
     public String getNome() {
@@ -61,10 +86,12 @@ public class pessoa {
     }
 
     public void setNome(String nome) throws Exception {
-        if((nome.length()>3) && (nome.length()<250 ))
+        if((nome.length()>3) && (nome.length()<250 )) {
             this.nome = nome;
-        else
+        }
+        else {
             throw new Exception("Não podem haver nomes com menos de 3 letras e mais do que 250 letras");
+        }
     }
 
     public int getCpf() {
@@ -75,28 +102,28 @@ public class pessoa {
         this.cpf = cpf;
     }
 
-    public List<br.edu.ifnmg.tads.ltp3.endereco> getEndereco() {
-        return endereco;
+    public List<br.edu.ifnmg.tads.ltp3.endereco> getEnderecos() {
+        return enderecos;
     }
 
-    public void setEndereco(List<br.edu.ifnmg.tads.ltp3.endereco> endereco) {
-        this.endereco = endereco;
+    public void setEnderecos(List<br.edu.ifnmg.tads.ltp3.endereco> endereco) {
+        this.enderecos = endereco;
     }
 
-    public List<br.edu.ifnmg.tads.ltp3.telefone> getTelefone() {
-        return telefone;
+    public List<br.edu.ifnmg.tads.ltp3.telefone> getTelefones() {
+        return telefones;
     }
 
-    public void setTelefone(List<br.edu.ifnmg.tads.ltp3.telefone> telefone) {
-        this.telefone = telefone;
+    public void setTelefones(List<br.edu.ifnmg.tads.ltp3.telefone> telefone) {
+        this.telefones = telefone;
     }
 
-    public List<br.edu.ifnmg.tads.ltp3.email> getEmail() {
-        return email;
+    public List<br.edu.ifnmg.tads.ltp3.email> getEmails() {
+        return emails;
     }
 
-    public void setEmail(List<br.edu.ifnmg.tads.ltp3.email> email) {
-        this.email = email;
+    public void setEmails(List<br.edu.ifnmg.tads.ltp3.email> email) {
+        this.emails = email;
     }
 
    
@@ -127,9 +154,9 @@ public class pessoa {
         hash = 97 * hash + Objects.hashCode(this.nascimento);
         hash = 97 * hash + Objects.hashCode(this.rg);
         hash = 97 * hash + this.cpf;
-        hash = 97 * hash + Objects.hashCode(this.endereco);
-        hash = 97 * hash + Objects.hashCode(this.telefone);
-        hash = 97 * hash + Objects.hashCode(this.email);
+        hash = 97 * hash + Objects.hashCode(this.enderecos);
+        hash = 97 * hash + Objects.hashCode(this.telefones);
+        hash = 97 * hash + Objects.hashCode(this.emails);
         return hash;
     }
 
@@ -162,7 +189,7 @@ public class pessoa {
 
     @Override
     public String toString() {
-        return "pessoa{" + "id=" + id + ", nome=" + nome + ", nascimento=" + nascimento + ", rg=" + rg + ", cpf=" + cpf + ", endereco=" + endereco + ", telefone=" + telefone + ", email=" + email + '}';
+        return "pessoa{" + "id=" + id + ", nome=" + nome + ", nascimento=" + nascimento + ", rg=" + rg + ", cpf=" + cpf + ", endereco=" + enderecos + ", telefone=" + telefones + ", email=" + emails + '}';
     }
 
    

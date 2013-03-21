@@ -20,10 +20,12 @@ public class Ltp3 {
         docente a = new docente();
         
         endereco as = new endereco();
+         endereco ass = new endereco();
         
         as.setCidade("januaria");
-        
+        ass.setCidade("januariadadasda");
         a.addEndereco(as);
+        a.addEndereco(ass);
         
       System.out.print(a.toString());
         
