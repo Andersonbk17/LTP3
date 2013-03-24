@@ -8,15 +8,15 @@ package br.edu.ifnmg.tads.ltp3;
  *
  * @author aluno
  */
-public class recurso {
+public class Recurso {
     private int id;
     private String nome;
     private String descricao;
     private int numpatrimonio;
     private int capacidade;
-    private tipo tipo;
+    private Tipo tipo;
 
-    public recurso() {
+    public Recurso() {
         
     }
 
@@ -60,11 +60,11 @@ public class recurso {
         this.capacidade = capacidade;
     }
 
-    public br.edu.ifnmg.tads.ltp3.tipo getTipo() {
+    public br.edu.ifnmg.tads.ltp3.Tipo getTipo() {
         return tipo;
     }
 
-    public void setTipo(br.edu.ifnmg.tads.ltp3.tipo tipo) {
+    public void setTipo(br.edu.ifnmg.tads.ltp3.Tipo tipo) {
         this.tipo = tipo;
     }
 

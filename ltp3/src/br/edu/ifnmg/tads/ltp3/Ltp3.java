@@ -17,10 +17,10 @@ public class Ltp3 {
      */
     public static void main(String[] args) throws Exception {
      
-        docente a = new docente();
+        Docente a = new Docente();
         
-        endereco as = new endereco();
-         endereco ass = new endereco();
+        Endereco as = new Endereco();
+         Endereco ass = new Endereco();
         
         as.setCidade("januaria");
         ass.setCidade("januariadadasda");

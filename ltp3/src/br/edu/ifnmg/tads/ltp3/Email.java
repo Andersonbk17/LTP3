@@ -4,19 +4,19 @@
  */
 package br.edu.ifnmg.tads.ltp3;
 
+import java.util.Objects;
+
 /**
  *
  * @author aluno
  */
-public class telefone {
+public class Email {
     private int id;
-    private int ddd;
-    private int numero;
+    private String endereco;
 
-    public telefone() {
-        id = 0;
-        ddd = 0;
-        numero = 0;
+    public Email() {
+        id = 0 ;
+        endereco = "";
     }
 
     public int getId() {
@@ -27,28 +27,19 @@ public class telefone {
         this.id = id;
     }
 
-    public int getDdd() {
-        return ddd;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setDdd(int ddd) {
-        this.ddd = ddd;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 23 * hash + this.id;
-        hash = 23 * hash + this.ddd;
-        hash = 23 * hash + this.numero;
+        int hash = 7;
+        hash = 59 * hash + this.id;
+        hash = 59 * hash + Objects.hashCode(this.endereco);
         return hash;
     }
 
@@ -60,14 +51,11 @@ public class telefone {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final telefone other = (telefone) obj;
+        final Email other = (Email) obj;
         if (this.id != other.id) {
             return false;
         }
-        if (this.ddd != other.ddd) {
-            return false;
-        }
-        if (this.numero != other.numero) {
+        if (!Objects.equals(this.endereco, other.endereco)) {
             return false;
         }
         return true;
@@ -75,8 +63,8 @@ public class telefone {
 
     @Override
     public String toString() {
-        return "telefone{" + "id=" + id + ", ddd=" + ddd + ", numero=" + numero + '}';
+        return "email{" + "id=" + id + ", endereco=" + endereco + '}';
     }
     
- 
+   
 }

@@ -4,19 +4,19 @@
  */
 package br.edu.ifnmg.tads.ltp3;
 
-import java.util.Objects;
-
 /**
  *
  * @author aluno
  */
-public class email {
+public class Telefone {
     private int id;
-    private String endereco;
+    private int ddd;
+    private int numero;
 
-    public email() {
-        id = 0 ;
-        endereco = "";
+    public Telefone() {
+        id = 0;
+        ddd = 0;
+        numero = 0;
     }
 
     public int getId() {
@@ -27,19 +27,28 @@ public class email {
         this.id = id;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public int getDdd() {
+        return ddd;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setDdd(int ddd) {
+        this.ddd = ddd;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + this.id;
-        hash = 59 * hash + Objects.hashCode(this.endereco);
+        int hash = 3;
+        hash = 23 * hash + this.id;
+        hash = 23 * hash + this.ddd;
+        hash = 23 * hash + this.numero;
         return hash;
     }
 
@@ -51,11 +60,14 @@ public class email {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final email other = (email) obj;
+        final Telefone other = (Telefone) obj;
         if (this.id != other.id) {
             return false;
         }
-        if (!Objects.equals(this.endereco, other.endereco)) {
+        if (this.ddd != other.ddd) {
+            return false;
+        }
+        if (this.numero != other.numero) {
             return false;
         }
         return true;
@@ -63,8 +75,8 @@ public class email {
 
     @Override
     public String toString() {
-        return "email{" + "id=" + id + ", endereco=" + endereco + '}';
+        return "telefone{" + "id=" + id + ", ddd=" + ddd + ", numero=" + numero + '}';
     }
     
-   
+ 
 }

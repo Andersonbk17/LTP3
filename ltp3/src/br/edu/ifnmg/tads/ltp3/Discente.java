@@ -8,25 +8,25 @@ package br.edu.ifnmg.tads.ltp3;
  *
  * @author aluno
  */
-public class discente extends pessoa {
+public class Discente extends Pessoa {
 
     private int matricula;
-    private curso curso;
+    private Curso curso;
     private int periodo;
     
     
     
-    public discente() {
+    public Discente() {
         matricula = 0;
-        curso = new curso();
+        curso = new Curso();
         periodo = 0;
     }
 
-    public br.edu.ifnmg.tads.ltp3.curso getCurso() {
+    public br.edu.ifnmg.tads.ltp3.Curso getCurso() {
         return curso;
     }
 
-    public void setCurso(br.edu.ifnmg.tads.ltp3.curso curso) {
+    public void setCurso(br.edu.ifnmg.tads.ltp3.Curso curso) {
         this.curso = curso;
     }
 

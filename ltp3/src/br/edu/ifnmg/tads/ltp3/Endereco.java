@@ -10,7 +10,7 @@ import java.util.Objects;
  *
  * @author aluno
  */
-public class endereco {
+public class Endereco {
     private int id;
     private String rua;
     private int num;
@@ -20,7 +20,7 @@ public class endereco {
     private String cidade;
     private String estado;
 
-    public endereco() {
+    public Endereco() {
         id = 0;
         rua = "";
         num = 0;
@@ -117,7 +117,7 @@ public class endereco {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final endereco other = (endereco) obj;
+        final Endereco other = (Endereco) obj;
         if (this.id != other.id) {
             return false;
         }

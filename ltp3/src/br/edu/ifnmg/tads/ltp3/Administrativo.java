@@ -8,12 +8,12 @@ package br.edu.ifnmg.tads.ltp3;
  *
  * @author aluno
  */
-public class administrativo extends pessoa{
+public class Administrativo extends Pessoa{
     private String setor;
     private String cargo;
     private int siape;
 
-    public administrativo() {
+    public Administrativo() {
         setor = "";
         cargo = "";
         siape = 0;

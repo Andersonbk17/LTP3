@@ -9,24 +9,24 @@ import java.util.Date;
  *
  * @author aluno
  */
-public class reserva {
+public class Reserva {
     private int id ;
     private Date dataInicio;
     private Date dataFim;
     private Date dataCadastro;
-    private docente responsavel;
-    private pessoa pessoa;
-    private recurso recurso;
+    private Docente responsavel;
+    private Pessoa pessoa;
+    private Recurso recurso;
     
     
-   /* public reserva(){
+   /* public Reserva(){
         id = 0;
         datainicio = new Date();
         datafim = new Date();
         datacadastro = new Date();
-        responsavel = new docente();
-        pessoa = new pessoa();
-        recurso = new recurso();
+        responsavel = new Docente();
+        Pessoa = new Pessoa();
+        Recurso = new Recurso();
     }
 
   */
@@ -63,27 +63,27 @@ public class reserva {
         this.dataCadastro = dataCadastro;
     }
 
-    public docente getResponsavel() {
+    public Docente getResponsavel() {
         return responsavel;
     }
 
-    public void setResponsavel(docente responsavel) {
+    public void setResponsavel(Docente responsavel) {
         this.responsavel = responsavel;
     }
 
-    public br.edu.ifnmg.tads.ltp3.pessoa getPessoa() {
+    public br.edu.ifnmg.tads.ltp3.Pessoa getPessoa() {
         return pessoa;
     }
 
-    public void setPessoa(br.edu.ifnmg.tads.ltp3.pessoa pessoa) {
+    public void setPessoa(br.edu.ifnmg.tads.ltp3.Pessoa pessoa) {
         this.pessoa = pessoa;
     }
 
-    public br.edu.ifnmg.tads.ltp3.recurso getRecurso() {
+    public br.edu.ifnmg.tads.ltp3.Recurso getRecurso() {
         return recurso;
     }
 
-    public void setRecurso(br.edu.ifnmg.tads.ltp3.recurso recurso) {
+    public void setRecurso(br.edu.ifnmg.tads.ltp3.Recurso recurso) {
         this.recurso = recurso;
     }
 

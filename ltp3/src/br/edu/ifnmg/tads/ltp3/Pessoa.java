@@ -11,60 +11,60 @@ import java.util.Objects;
  *
  * @author aluno
  */
-public class pessoa {
+public class Pessoa {
     
     private int id;
     private String nome;
     private Date nascimento;
     private String rg;
     private int cpf;
-    private List<endereco> enderecos;
-    private List<telefone> telefones;
-    private List<email> emails;
+    private List<Endereco> enderecos;
+    private List<Telefone> telefones;
+    private List<Email> emails;
 
-    public pessoa(){
+    public Pessoa(){
         id = 0;
         nome = "";
         rg = "";
         cpf = 0;
-        enderecos = new LinkedList<endereco>();
-        telefones = new LinkedList<telefone>();
-        emails = new LinkedList<email>();
+        enderecos = new LinkedList<Endereco>();
+        telefones = new LinkedList<Telefone>();
+        emails = new LinkedList<Email>();
         
     }
     
     
-    public void addEndereco(endereco e){
+    public void addEndereco(Endereco e){
         if(!enderecos.contains(e)){
             this.enderecos.add(e);
         }
     }
     
-    public void addTelefone(telefone t){
+    public void addTelefone(Telefone t){
         if(!telefones.contains(t)){
             this.telefones.add(t);
         }
     }
-    public void addEmail(email e){
+    public void addEmail(Email e){
         if(!emails.contains(e)){
                this.emails.add(e);
         }
     }
     
     
-    public void removeEmails(email e){
+    public void removeEmails(Email e){
         if(emails.contains(e)){
                emails.remove(e);
         }
     }
     
-    public void removeEnderecos(endereco e){
+    public void removeEnderecos(Endereco e){
         if(enderecos.contains(e)){
             enderecos.remove(e);
         }
     }
     
-    public void removeTelefones(telefone t){
+    public void removeTelefones(Telefone t){
         if(telefones.contains(t)){
             telefones.remove(t);
         }
@@ -102,27 +102,27 @@ public class pessoa {
         this.cpf = cpf;
     }
 
-    public List<br.edu.ifnmg.tads.ltp3.endereco> getEnderecos() {
+    public List<br.edu.ifnmg.tads.ltp3.Endereco> getEnderecos() {
         return enderecos;
     }
 
-    public void setEnderecos(List<br.edu.ifnmg.tads.ltp3.endereco> endereco) {
+    public void setEnderecos(List<br.edu.ifnmg.tads.ltp3.Endereco> endereco) {
         this.enderecos = endereco;
     }
 
-    public List<br.edu.ifnmg.tads.ltp3.telefone> getTelefones() {
+    public List<br.edu.ifnmg.tads.ltp3.Telefone> getTelefones() {
         return telefones;
     }
 
-    public void setTelefones(List<br.edu.ifnmg.tads.ltp3.telefone> telefone) {
+    public void setTelefones(List<br.edu.ifnmg.tads.ltp3.Telefone> telefone) {
         this.telefones = telefone;
     }
 
-    public List<br.edu.ifnmg.tads.ltp3.email> getEmails() {
+    public List<br.edu.ifnmg.tads.ltp3.Email> getEmails() {
         return emails;
     }
 
-    public void setEmails(List<br.edu.ifnmg.tads.ltp3.email> email) {
+    public void setEmails(List<br.edu.ifnmg.tads.ltp3.Email> email) {
         this.emails = email;
     }
 
@@ -168,7 +168,7 @@ public class pessoa {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final pessoa other = (pessoa) obj;
+        final Pessoa other = (Pessoa) obj;
         if (this.id != other.id) {
             return false;
         }

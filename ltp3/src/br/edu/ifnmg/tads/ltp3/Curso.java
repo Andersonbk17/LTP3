@@ -8,12 +8,12 @@ package br.edu.ifnmg.tads.ltp3;
  *
  * @author aluno
  */
-public class curso {
+public class Curso {
     
     private int id;
     private String nome;
 
-    public curso() {
+    public Curso() {
         id = 0;
         nome = "";
     }

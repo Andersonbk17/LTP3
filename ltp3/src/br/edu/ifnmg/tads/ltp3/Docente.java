@@ -8,13 +8,13 @@ package br.edu.ifnmg.tads.ltp3;
  *
  * @author aluno
  */
-public class docente extends pessoa {
+public class Docente extends Pessoa {
     
     private String titulacao;
     private String nivel;
     private int siape;
     
-    public docente() {
+    public Docente() {
         titulacao = "";
         nivel = "";
         siape = 0;
